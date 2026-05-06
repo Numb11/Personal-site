@@ -216,37 +216,40 @@ nav ul li a:hover::after {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background: var(--primary-color);
     color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 5px;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
     background: var(--primary-color-hover);
     color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+
+.btn i {
+    font-size: 1.3rem;
+    filter: brightness(0) invert(1); /* Forces the GitHub logo to be perfectly white */
 }
 
 .view-work-btn {
     margin-top: 3rem;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
     opacity: 0;
     animation: fadeUp 0.8s ease-out 0.8s forwards;
-}
-
-.view-work-btn:hover {
-    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
-    transform: translateY(-4px);
 }
 
 /* --- Projects Section --- */
@@ -301,6 +304,12 @@ nav ul li a:hover::after {
 .project-card img.project-screenshot {
     object-fit: contain;
     background-color: #ffffff;
+}
+
+.project-card img.chatbot-vid {
+    width: calc(100% + 20px);
+    max-width: none;
+    margin-left: -10px;
 }
 
 .project-card > h3 {
@@ -358,6 +367,12 @@ nav ul li a:hover::after {
     color: #6c757d;
 }
 
+.tech-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #6c757d;
+}
+
 /* --- Contact Section --- */
 #contact-form {
     max-width: 600px;
@@ -380,22 +395,6 @@ nav ul li a:hover::after {
 #contact-form textarea {
     min-height: 150px;
     resize: vertical;
-}
-
-#contact-form button {
-    cursor: pointer;
-    border: none;
-    background: var(--primary-color);
-    color: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-#contact-form button:hover {
-    background: var(--primary-color-hover);
 }
 
 /* --- Footer --- */
@@ -519,6 +518,10 @@ body.modal-active {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+#modal-img[src="Application_Test_Vid.gif"] {
+    clip-path: inset(0 10px);
+}
+
 .info-block {
     background-color: var(--secondary-color);
     padding: 1.8rem;
@@ -548,4 +551,14 @@ body.modal-active {
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .nav-socials {
+        display: none;
+    }
+    nav ul {
+        gap: 1rem; /* Reduces the gap to prevent squishing on very narrow phones */
+    }
 }
