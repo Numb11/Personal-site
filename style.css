@@ -553,12 +553,172 @@ body.modal-active {
     gap: 1rem;
 }
 
+/* --- Responsive Design (Tablet) --- */
+@media (max-width: 900px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
 /* --- Responsive Design (Mobile) --- */
 @media (max-width: 768px) {
+    /* Navigation */
     .nav-socials {
         display: none;
     }
+    nav {
+        padding: 0.75rem 1rem;
+        justify-content: center;
+    }
     nav ul {
-        gap: 1rem; /* Reduces the gap to prevent squishing on very narrow phones */
+        gap: 1.2rem;
+    }
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* Hide side scroll dots — they overlap content on narrow screens */
+    .scroll-nav {
+        display: none;
+    }
+
+    /* Typography scale-down */
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+    h3 { font-size: 1.15rem; }
+
+    /* Section spacing */
+    section {
+        padding: 3.5rem 1.2rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 70px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    .hero-about {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+    .view-work-btn {
+        margin-top: 1.5rem;
+    }
+
+    /* Button */
+    .btn {
+        padding: 0.75rem 1.8rem;
+        font-size: 0.82rem;
+        letter-spacing: 1px;
+    }
+
+    /* Project grid */
+    .project-grid {
+        gap: 2rem;
+        margin: 1.5rem auto 0 auto;
+    }
+    .project-card {
+        margin-bottom: 0;
+    }
+    .project-card > h3 {
+        font-size: 1.35rem;
+        padding: 1rem 1rem 0;
+    }
+    .project-card img {
+        height: 210px;
+    }
+    .project-card img.project-logo {
+        padding: 2rem;
+    }
+    .project-card-content {
+        padding: 0 1rem 1rem;
+    }
+    .project-card-content p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .tech-logos i {
+        font-size: 1.6rem;
+    }
+
+    /* Contact form */
+    #contact-form {
+        padding: 0 0.25rem;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .social-links {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    /* Modal */
+    .modal-content {
+        margin: 0 auto;
+        padding: 1.25rem;
+        width: 96%;
+        border-radius: 8px;
+        max-height: 92vh;
+        overflow-y: auto;
+        transform: none;
+        position: relative;
+        top: 4vh;
+    }
+    body.modal-active .modal-content {
+        transform: none;
+    }
+    #modal-title {
+        font-size: 1.3rem;
+    }
+    #modal-img {
+        max-height: 200px;
+    }
+    .info-block {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    .info-title {
+        font-size: 1rem;
+    }
+    #modal-body p {
+        font-size: 0.9rem;
+    }
+    .modal-footer {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+        padding-top: 1rem;
+    }
+    .close-button {
+        top: 0.75rem;
+        right: 1rem;
+        font-size: 1.75rem;
+    }
+}
+
+/* --- Responsive Design (Small phones) --- */
+@media (max-width: 420px) {
+    h1 { font-size: 1.65rem; }
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+    nav ul {
+        gap: 0.8rem;
+    }
+    section {
+        padding: 3rem 1rem;
     }
 }
